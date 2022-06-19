@@ -1,0 +1,45 @@
+<div class="mb-3">
+    <div class="container">
+        <div class="card border-success mb-3">
+            <div class="card-header text-danger">
+                <h2 class="text-center">
+                    {{titulo}}
+                </h2>
+            </div>
+            <div class="card-body text-primary table-responsive">
+                <div class="my-2 text-left">
+                    <button class="btn btn-outline-primary" type="button" routerLink="/categorias">
+                        <i class="fa-solid fa-layer-group"></i> Registrar Categoria
+                    </button>
+                    &nbsp;<button class="btn btn-outline-primary" type="button" (click)="buscar()" >
+                        <i class="fa-solid fa-search"></i> Buscar categoría
+                    </button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let categoria of listaDeCategorias">
+                            <td>{{categoria.idCategoria}}</td>
+                            <td>{{categoria.nombreCategoria}}</td>
+                            <td>{{categoria.descripcionCategoria}}</td>
+                            <td>
+                                <button class="btn btn-outline-success btn-sm" name="actualizar" routerLink = "/categorias/{{categoria.idCategoria}}"><i class="fa-solid fa-file-pen"></i>  Actualizar</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-danger btn-sm" (click)="eliminar(categoria)" name="eliminar"><i class="fa-solid fa-trash-can"></i>  Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

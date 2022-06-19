@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card border-info mb-3">
+        <div class="card-header text-primary">
+            <h2 class="text-center">
+                {{ titulo }}
+            </h2>
+        </div>
+        <div class="card-body text-primary table-responsive">
+            <form (ngSubmit)="updateCategoria()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">
+                        Nombre de la Categoría
+                    </label>
+                    <input type="text" class="form-control" name="nombre" required [(ngModel)] = "categoria.nombreCategoria">
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">
+                        Descripción de la Categoría
+                    </label>
+                    <input type="text" class="form-control" name="descripcion" required [(ngModel)] = "categoria.descripcionCategoria">
+                </div>
+                <div class="mb-3">
+                    <button class="btn-outline-primary form-control">
+                        Actualizar Categoria
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
