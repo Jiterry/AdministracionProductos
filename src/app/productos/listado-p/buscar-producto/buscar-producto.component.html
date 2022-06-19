@@ -1,0 +1,43 @@
+<div class="mb-3">
+    <div class="container">
+        <div class="card border-success mb-3">
+            <div class="card-header text-danger">
+                <h2 class="text-center">
+                    {{titulo}}
+                </h2>
+            </div>
+            <div class="card-body text-primary table-responsive">
+                <div class="my-2 text-left">
+                    <button class="btn btn-outline-primary" type="button" routerLink="/listadoP">
+                        <i class="fa-solid fa-arrow-left"></i> Regresar
+                    </button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Existencia</th>
+                            <th>Precio</th>
+                            <th>Categoria</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{producto.idProducto}}</td>
+                            <td>{{producto.nombreProducto}}</td>
+                            <td>{{producto.descripcionProducto}}</td>
+                            <td>{{producto.existencia}}</td>
+                            <td>{{producto.precioProducto}}</td>
+                            <td>{{producto.idCategoria.idCategoria}}</td>
+                            <td>{{producto.fechaCreacion}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
